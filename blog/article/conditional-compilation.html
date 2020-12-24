@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Antmove跨端开发：跨端语法与条件编译 | Antmove - 小程序转换器</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="icon" href="https://cache.amap.com/ecology/tool/antmove/logo.png">
+    <meta name="description" content="小程序转换器，轻量级小程序跨端解决方案">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.842ea349.css" as="style"><link rel="preload" href="/assets/js/app.b24cb1c1.js" as="script"><link rel="preload" href="/assets/js/2.360668ca.js" as="script"><link rel="preload" href="/assets/js/16.ca839621.js" as="script"><link rel="prefetch" href="/assets/js/10.189586fc.js"><link rel="prefetch" href="/assets/js/11.ca83c846.js"><link rel="prefetch" href="/assets/js/12.2e276302.js"><link rel="prefetch" href="/assets/js/13.7f748d5a.js"><link rel="prefetch" href="/assets/js/14.52575f60.js"><link rel="prefetch" href="/assets/js/15.3cd41abf.js"><link rel="prefetch" href="/assets/js/17.8b3c08e5.js"><link rel="prefetch" href="/assets/js/18.22fb8554.js"><link rel="prefetch" href="/assets/js/19.2a566a74.js"><link rel="prefetch" href="/assets/js/20.98343508.js"><link rel="prefetch" href="/assets/js/21.cc77303f.js"><link rel="prefetch" href="/assets/js/22.cfb4e3a7.js"><link rel="prefetch" href="/assets/js/23.8aaacaf9.js"><link rel="prefetch" href="/assets/js/24.1f897d82.js"><link rel="prefetch" href="/assets/js/25.c7301817.js"><link rel="prefetch" href="/assets/js/26.5956c72e.js"><link rel="prefetch" href="/assets/js/27.3be75ef9.js"><link rel="prefetch" href="/assets/js/28.88a1be0b.js"><link rel="prefetch" href="/assets/js/29.bbd15d81.js"><link rel="prefetch" href="/assets/js/3.6bd71a22.js"><link rel="prefetch" href="/assets/js/30.99a5b14a.js"><link rel="prefetch" href="/assets/js/31.fe9d0d2a.js"><link rel="prefetch" href="/assets/js/32.4fdbef76.js"><link rel="prefetch" href="/assets/js/33.309182a8.js"><link rel="prefetch" href="/assets/js/34.bc862a0a.js"><link rel="prefetch" href="/assets/js/35.476e2f3b.js"><link rel="prefetch" href="/assets/js/36.5f71166a.js"><link rel="prefetch" href="/assets/js/37.3a745bca.js"><link rel="prefetch" href="/assets/js/38.a1730877.js"><link rel="prefetch" href="/assets/js/39.18ca7571.js"><link rel="prefetch" href="/assets/js/4.3eb4e871.js"><link rel="prefetch" href="/assets/js/5.d47671f7.js"><link rel="prefetch" href="/assets/js/6.04568ca4.js"><link rel="prefetch" href="/assets/js/7.6b205a61.js"><link rel="prefetch" href="/assets/js/8.bcc6e7c3.js"><link rel="prefetch" href="/assets/js/9.47fd70d6.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.842ea349.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="https://cache.amap.com/ecology/tool/antmove/logo.png" alt="Antmove - 小程序转换器" class="logo"> <span class="site-name can-hide">Antmove - 小程序转换器</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="/config/" class="nav-link">
+  配置
+</a></div><div class="nav-item"><a href="/api/" class="nav-link">
+  API
+</a></div><div class="nav-item"><a href="/amove/" class="nav-link">
+  编译器
+</a></div><div class="nav-item"><a href="/changelog/" class="nav-link">
+  更新日志
+</a></div><div class="nav-item"><a href="/blog/" class="nav-link router-link-active">
+  博客
+</a></div><div class="nav-item"><a href="https://a.amap.com/antmove/static/data/treeTable.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  转换程度
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://github.com/ant-move/Antmove" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="/config/" class="nav-link">
+  配置
+</a></div><div class="nav-item"><a href="/api/" class="nav-link">
+  API
+</a></div><div class="nav-item"><a href="/amove/" class="nav-link">
+  编译器
+</a></div><div class="nav-item"><a href="/changelog/" class="nav-link">
+  更新日志
+</a></div><div class="nav-item"><a href="/blog/" class="nav-link router-link-active">
+  博客
+</a></div><div class="nav-item"><a href="https://a.amap.com/antmove/static/data/treeTable.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  转换程度
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://github.com/ant-move/Antmove" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Antmove跨端开发：跨端语法与条件编译</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/article/conditional-compilation.html#背景" class="sidebar-link">背景</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/article/conditional-compilation.html#跨端语法" class="sidebar-link">跨端语法</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/article/conditional-compilation.html#模板文件" class="sidebar-link">模板文件</a></li><li class="sidebar-sub-header"><a href="/blog/article/conditional-compilation.html#脚本文件" class="sidebar-link">脚本文件</a></li><li class="sidebar-sub-header"><a href="/blog/article/conditional-compilation.html#样式文件" class="sidebar-link">样式文件</a></li><li class="sidebar-sub-header"><a href="/blog/article/conditional-compilation.html#配置文件" class="sidebar-link">配置文件</a></li></ul></li><li><a href="/blog/article/conditional-compilation.html#条件编译" class="sidebar-link">条件编译</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/article/conditional-compilation.html#案例-vant-aliapp" class="sidebar-link">案例：vant-aliapp</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/article/conditional-compilation.html#vant-aliapp演示小程序" class="sidebar-link">vant-aliapp演示小程序</a></li><li class="sidebar-sub-header"><a href="/blog/article/conditional-compilation.html#在模板中使用跨端语法" class="sidebar-link">在模板中使用跨端语法</a></li><li class="sidebar-sub-header"><a href="/blog/article/conditional-compilation.html#在脚本中使用跨端语法-以circle组件为例" class="sidebar-link">在脚本中使用跨端语法：以circle组件为例</a></li><li class="sidebar-sub-header"><a href="/blog/article/conditional-compilation.html#在app-json中使用不同的配置" class="sidebar-link">在app.json中使用不同的配置</a></li></ul></li><li><a href="/blog/article/conditional-compilation.html#结语" class="sidebar-link">结语</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="antmove跨端开发-跨端语法与条件编译"><a href="#antmove跨端开发-跨端语法与条件编译" class="header-anchor">#</a> Antmove跨端开发：跨端语法与条件编译</h1> <h2 id="背景"><a href="#背景" class="header-anchor">#</a> 背景</h2> <p>Antmove小程序转换器自去年发布以来，GitHub上的star数上千，交流群中有近500个活跃用户，已经帮助众多小程序实现转换迁徙。
+虽然Antmove可以对已经实现的小程序功能进行转换，由于不同平台存在一些无法抹平的特性差异，以及针对特定平台可能有不同的产品需求，目前用户比较常见的开发方式是使用Antmove转换源码，然后对转换后的代码进行二次修改。</p> <p>这种开发方式虽然一定程度上可以实现用户需求，但存在几点问题：</p> <p>第一，业务上仍然需要维护转换前后的两套代码，维护成本不可控，也与我们一次编写，多处运行的初心相悖，失去了转换的优势；</p> <p>第二，用户只能使用Antmove转换一次，无法再次使用Antmove工具从源码进行转换，因为会覆盖对转换代码的修改。</p> <p>总之，这种方式从开发效率和可维护性而言，都不是最理想的方案。为解决这个问题，Antmove增加了跨端语法与条件编译功能，用户可以使用跨端语法在小程序源码中编写特定平台的逻辑，结合Antmove的条件编译功能，只需维护一套源码，即可实现跨端开发。接下来，本文将通过一个案例具体介绍这种方案。</p> <h2 id="跨端语法"><a href="#跨端语法" class="header-anchor">#</a> 跨端语法</h2> <p>Antmove的跨端语法支持在模版、配置、脚本和样式中使用。</p> <h3 id="模板文件"><a href="#模板文件" class="header-anchor">#</a> 模板文件</h3> <p>在模版文件中，可以使用 is-xxx 属性（目前支持is-wx、is-alipay、is-swan、is-tt、 is-quick）来区分不同的平台。例如</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span> <span class="token attr-name">is-wx</span><span class="token punctuation">&gt;</span></span>这是微信小程序<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>text</span><span class="token punctuation">&gt;</span></span> //需要编译到微信小程序的代码
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span> <span class="token attr-name">is-alipay</span><span class="token punctuation">&gt;</span></span>这是支付宝小程序<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>text</span><span class="token punctuation">&gt;</span></span> //需要编译到支付宝小程序的代码
+</code></pre></div><p>Antmove会针对不同的平台，保留不同的标记。</p> <h3 id="脚本文件"><a href="#脚本文件" class="header-anchor">#</a> 脚本文件</h3> <p>在脚本文件中，可以使用if条件语句，例如：<code>wx.__target__ === 'alipay'</code>，比较运算前的wx代表源代码的平台端（支持wx、alipay），比较运算后的 'alipay' 代表输出平台端（支持'alipay'、'wx'、'tt'、''swan、'quick'）.在脚本中使用应该是最常见的场景。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">//源代码</span>
+<span class="token keyword">let</span> type <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>wx<span class="token punctuation">.</span>__target__ <span class="token operator">===</span> <span class="token string">'alipay'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    type <span class="token operator">=</span> <span class="token string">'alipay'</span><span class="token punctuation">;</span>  <span class="token comment">//需要编译到支付宝小程序的代码</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    type <span class="token operator">=</span> <span class="token string">'wx'</span><span class="token punctuation">;</span>  <span class="token comment">//需要编译到微信小程序的代码</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="样式文件"><a href="#样式文件" class="header-anchor">#</a> 样式文件</h3> <p>在样式文件中，可以在/* <em>xxxStart *</em>/和/* <em>xxxEnd *</em>/之间写下样式，xxx可替换为wx、alipay、swan、tt、quick. Antmove会将针对不同的平台保留特有的样式。</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/*wxStart*/</span>
+<span class="token selector">.red</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/*wxEnd*/</span>
+
+<span class="token comment">/*alipayStart*/</span>
+<span class="token selector">.green</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/*alipayEnd*/</span>
+</code></pre></div><h3 id="配置文件"><a href="#配置文件" class="header-anchor">#</a> 配置文件</h3> <p>在配置文件中，可以使用&quot;_&lt;输出平台前缀&gt;Env&quot; 作为键（_wxEnv、_alipayEnv、_swanEnv、_quickEnv、_ttEnv），这样就可以针对不同的平台提供不同的配置文件。</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token comment">// 源代码</span>
+<span class="token property">&quot;_wxEnv&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+  <span class="token property">&quot;window&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;backgroundTextStyle&quot;</span><span class="token operator">:</span> <span class="token string">&quot;light&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;navigationBarBackgroundColor&quot;</span><span class="token operator">:</span> <span class="token string">&quot;#0068C4&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;navigationBarTitleText&quot;</span><span class="token operator">:</span> <span class="token string">&quot;知乎微信小程序&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;navigationBarTextStyle&quot;</span><span class="token operator">:</span> <span class="token string">&quot;white&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;enablePullDownRefresh&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token property">&quot;_alipayEnv&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token property">&quot;window&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;navigationBarTitleText&quot;</span><span class="token operator">:</span> <span class="token string">&quot;知乎支付宝小程序&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;navigationBarTextStyle&quot;</span><span class="token operator">:</span> <span class="token string">&quot;white&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;enablePullDownRefresh&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>Antmove会识别以上跨端语法，条件编译到不同的平台。有关跨端语法的更多详情可以查看antmove相关<a href="https://ant-move.github.io/guide/children/cross-platform.html" target="_blank" rel="noopener noreferrer">文档<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>。</p> <h2 id="条件编译"><a href="#条件编译" class="header-anchor">#</a> 条件编译</h2> <p>Antmove的条件编译使用比较简单，以微信小程序源码为例，在微信小程序源码中使用跨端语法之后，执行 <code>antmove -t wx</code> 命令，可以得到干净的微信源码，执行 <code>antmove</code> 命令，则可以条件编译到其他平台。</p> <h2 id="案例-vant-aliapp"><a href="#案例-vant-aliapp" class="header-anchor">#</a> 案例：<a href="https://github.com/ant-move/Vant-Aliapp/" target="_blank" rel="noopener noreferrer">vant-aliapp<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></h2> <p>我们使用Antmove对一些常用的微信小程序组件库比如vant/weui等做了转换，并发布了对应的支付宝小程序版本。在最新一次升级过程中，我们就采用了Antmove的跨端语法对 vant 1.6.2 的源码进行修改，条件编译到微信和支付宝平台。</p> <h3 id="vant-aliapp演示小程序"><a href="#vant-aliapp演示小程序" class="header-anchor">#</a> vant-aliapp演示小程序</h3> <p>具体效果可以使用支付宝扫码查看</p> <p><img src="https://intranetproxy.alipay.com/skylark/lark/0/2020/png/286280/1608635125557-492d5864-8d5a-4dc4-971a-aabe2dbf7b81.png#align=left&amp;display=inline&amp;height=143&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=286&amp;originWidth=290&amp;size=121127&amp;status=done&amp;style=none&amp;width=145" alt="image.png"></p> <h3 id="在模板中使用跨端语法"><a href="#在模板中使用跨端语法" class="header-anchor">#</a> 在模板中使用跨端语法</h3> <p>一般情况下，你不需要在模板中使用跨端语法，但在某些场景下则比较有用，比如只在微信小程序中存在的公众号组件。</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">&gt;</span></span>微信公众号关注组件<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>official-account</span> <span class="token attr-name">is-wx</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>official-account</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+
+</code></pre></div><h3 id="在脚本中使用跨端语法-以circle组件为例"><a href="#在脚本中使用跨端语法-以circle组件为例" class="header-anchor">#</a> 在脚本中使用跨端语法：以circle组件为例</h3> <p>vant的circle组件使用了canvas，而微信与支付宝小程序的canvas/SelectorQuery等接口能力不尽相同，虽然Antmove已经抹平了大部分的差异，但还是存在类似于<a href="https://developers.weixin.qq.com/miniprogram/dev/api/wxml/SelectorQuery.in.html" target="_blank" rel="noopener noreferrer">SelectorQuery.in<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>这样无法抹平的差异。因此我们在脚本中使用wx.__target__的跨端语法来加以区分。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// ...</span>
+methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token comment">//...</span>
+  <span class="token function">getContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> <span class="token punctuation">{</span>
+        type<span class="token punctuation">,</span>
+        size
+      <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>type <span class="token operator">===</span> <span class="token string">''</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> ctx <span class="token operator">=</span> <span class="token keyword">null</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>wx<span class="token punctuation">.</span>__target__ <span class="token operator">===</span> <span class="token string">'alipay'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          ctx <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">createCanvasContext</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+          ctx <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">createCanvasContext</span><span class="token punctuation">(</span><span class="token string">'van-circle'</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>ctx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">const</span> dpr <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">getSystemInfoSync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>pixelRatio<span class="token punctuation">;</span>
+      <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>wx<span class="token punctuation">.</span>__target__ <span class="token operator">===</span> <span class="token string">'alipay'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">const</span> ctx <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">createCanvasContext</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>inited<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>inited <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+              _size<span class="token operator">:</span> size <span class="token operator">*</span> dpr
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+            ctx<span class="token punctuation">.</span><span class="token function">scale</span><span class="token punctuation">(</span>dpr<span class="token punctuation">,</span> dpr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+          <span class="token function">resolve</span><span class="token punctuation">(</span>ctx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+          wx<span class="token punctuation">.</span><span class="token function">createSelectorQuery</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">in</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">select</span><span class="token punctuation">(</span><span class="token string">'#van-circle'</span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">node</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+              <span class="token keyword">const</span> canvas <span class="token operator">=</span> res<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>node<span class="token punctuation">;</span>
+              <span class="token keyword">const</span> ctx <span class="token operator">=</span> canvas<span class="token punctuation">.</span><span class="token function">getContext</span><span class="token punctuation">(</span>type<span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>inited<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span>inited <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+                canvas<span class="token punctuation">.</span>width <span class="token operator">=</span> size <span class="token operator">*</span> dpr<span class="token punctuation">;</span>
+                canvas<span class="token punctuation">.</span>height <span class="token operator">=</span> size <span class="token operator">*</span> dpr<span class="token punctuation">;</span>
+                ctx<span class="token punctuation">.</span><span class="token function">scale</span><span class="token punctuation">(</span>dpr<span class="token punctuation">,</span> dpr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span>
+              <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token function">adaptor</span><span class="token punctuation">(</span>ctx<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>在上述的代码中，在支付宝平台，我们直接使用canvas上的id创建canvas context，在微信平台，则是在当前自定义组件内查询特定id的canvas context. 我们使用Antmove转换到支付宝之后，只会保留支付宝的代码：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// ...</span>
+methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token comment">//...</span>
+  <span class="token function">getContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> <span class="token punctuation">{</span>
+        type<span class="token punctuation">,</span>
+        size
+      <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>type <span class="token operator">===</span> <span class="token string">''</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> ctx <span class="token operator">=</span> <span class="token keyword">null</span>
+        ctx <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">createCanvasContext</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>ctx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">const</span> dpr <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">getSystemInfoSync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>pixelRatio<span class="token punctuation">;</span>
+      <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> ctx <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">createCanvasContext</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>inited<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>inited <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+              _size<span class="token operator">:</span> size <span class="token operator">*</span> dpr
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+            ctx<span class="token punctuation">.</span><span class="token function">scale</span><span class="token punctuation">(</span>dpr<span class="token punctuation">,</span> dpr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+          <span class="token function">resolve</span><span class="token punctuation">(</span>ctx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>同时我们执行 antmove -t wx 命令则会得到干净的微信代码：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// ...</span>
+methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token comment">//...</span>
+  <span class="token function">getContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> <span class="token punctuation">{</span>
+        type<span class="token punctuation">,</span>
+        size
+      <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>type <span class="token operator">===</span> <span class="token string">''</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> ctx <span class="token operator">=</span> <span class="token keyword">null</span>
+        ctx <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">createCanvasContext</span><span class="token punctuation">(</span><span class="token string">'van-circle'</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>ctx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">const</span> dpr <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">getSystemInfoSync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>pixelRatio<span class="token punctuation">;</span>
+      <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        wx<span class="token punctuation">.</span><span class="token function">createSelectorQuery</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">in</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">select</span><span class="token punctuation">(</span><span class="token string">'#van-circle'</span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">node</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+              <span class="token keyword">const</span> canvas <span class="token operator">=</span> res<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>node<span class="token punctuation">;</span>
+              <span class="token keyword">const</span> ctx <span class="token operator">=</span> canvas<span class="token punctuation">.</span><span class="token function">getContext</span><span class="token punctuation">(</span>type<span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>inited<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span>inited <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+                canvas<span class="token punctuation">.</span>width <span class="token operator">=</span> size <span class="token operator">*</span> dpr<span class="token punctuation">;</span>
+                canvas<span class="token punctuation">.</span>height <span class="token operator">=</span> size <span class="token operator">*</span> dpr<span class="token punctuation">;</span>
+                ctx<span class="token punctuation">.</span><span class="token function">scale</span><span class="token punctuation">(</span>dpr<span class="token punctuation">,</span> dpr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span>
+              <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token function">adaptor</span><span class="token punctuation">(</span>ctx<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>在脚本中使用跨端语法尤其适用于针对不同平台实现不同逻辑的场景，以上只是一例。</p> <h3 id="在app-json中使用不同的配置"><a href="#在app-json中使用不同的配置" class="header-anchor">#</a> 在app.json中使用不同的配置</h3> <p>支付宝中不支持设置导航栏文字颜色，而是根据导航栏背景色自动配置，因此，我们对app.json的内容作了如下修改，实现不同的导航栏配置：</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+  <span class="token property">&quot;_wxEnv&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;window&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;navigationBarBackgroundColor&quot;</span><span class="token operator">:</span> <span class="token string">&quot;#f8f8f8&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;navigationBarTitleText&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Vant Weapp&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;navigationBarTextStyle&quot;</span><span class="token operator">:</span> <span class="token string">&quot;black&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;backgroundTextStyle&quot;</span><span class="token operator">:</span> <span class="token string">&quot;dark&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;backgroundColor&quot;</span><span class="token operator">:</span> <span class="token string">&quot;#f8f8f8&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;_alipayEnv&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;window&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;titleBarColor&quot;</span><span class="token operator">:</span> <span class="token string">&quot;#ffffff&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;navigationBarTitleText&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Vant Aliapp&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;backgroundColor&quot;</span><span class="token operator">:</span> <span class="token string">&quot;#f8f8f8&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>对于其他各平台有差异的属性，也可以通过这种方式赋予不同的配置。</p> <h2 id="结语"><a href="#结语" class="header-anchor">#</a> 结语</h2> <p>善用跨端语法，可以抹平不同平台的特性差异，也可以针对特定平台实现产品需求。相对于修改转换之后的代码而言，只需维护一套代码，降低维护成本，做到了一次编写，多处运行。</p> <p>跨端语法和条件编译，让 Antmove 的跨端转换能力更加完善。对于一些历史比较悠久的有跨端需求的微信小程序项目，在使用类似taro/uni-app/rax等跨端框架重构或者重新开发一套特定平台的小程序之外，使用Antmove进行转换是成本更低的一种跨端方案。</p> <p>最后，Antmove作为维护时间最久的小程序转换项目，可以从微信小程序一键转换到支付宝、头条、快应用等各个端，欢迎大家交流和使用。</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.b24cb1c1.js" defer></script><script src="/assets/js/2.360668ca.js" defer></script><script src="/assets/js/16.ca839621.js" defer></script>
+  </body>
+</html>

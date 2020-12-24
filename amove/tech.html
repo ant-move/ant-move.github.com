@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Amove | Antmove - 小程序转换器</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="icon" href="https://cache.amap.com/ecology/tool/antmove/logo.png">
+    <meta name="description" content="小程序转换器，轻量级小程序跨端解决方案">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.842ea349.css" as="style"><link rel="preload" href="/assets/js/app.b24cb1c1.js" as="script"><link rel="preload" href="/assets/js/2.360668ca.js" as="script"><link rel="preload" href="/assets/js/12.2e276302.js" as="script"><link rel="prefetch" href="/assets/js/10.189586fc.js"><link rel="prefetch" href="/assets/js/11.ca83c846.js"><link rel="prefetch" href="/assets/js/13.7f748d5a.js"><link rel="prefetch" href="/assets/js/14.52575f60.js"><link rel="prefetch" href="/assets/js/15.3cd41abf.js"><link rel="prefetch" href="/assets/js/16.ca839621.js"><link rel="prefetch" href="/assets/js/17.8b3c08e5.js"><link rel="prefetch" href="/assets/js/18.22fb8554.js"><link rel="prefetch" href="/assets/js/19.2a566a74.js"><link rel="prefetch" href="/assets/js/20.98343508.js"><link rel="prefetch" href="/assets/js/21.cc77303f.js"><link rel="prefetch" href="/assets/js/22.cfb4e3a7.js"><link rel="prefetch" href="/assets/js/23.8aaacaf9.js"><link rel="prefetch" href="/assets/js/24.1f897d82.js"><link rel="prefetch" href="/assets/js/25.c7301817.js"><link rel="prefetch" href="/assets/js/26.5956c72e.js"><link rel="prefetch" href="/assets/js/27.3be75ef9.js"><link rel="prefetch" href="/assets/js/28.88a1be0b.js"><link rel="prefetch" href="/assets/js/29.bbd15d81.js"><link rel="prefetch" href="/assets/js/3.6bd71a22.js"><link rel="prefetch" href="/assets/js/30.99a5b14a.js"><link rel="prefetch" href="/assets/js/31.fe9d0d2a.js"><link rel="prefetch" href="/assets/js/32.4fdbef76.js"><link rel="prefetch" href="/assets/js/33.309182a8.js"><link rel="prefetch" href="/assets/js/34.bc862a0a.js"><link rel="prefetch" href="/assets/js/35.476e2f3b.js"><link rel="prefetch" href="/assets/js/36.5f71166a.js"><link rel="prefetch" href="/assets/js/37.3a745bca.js"><link rel="prefetch" href="/assets/js/38.a1730877.js"><link rel="prefetch" href="/assets/js/39.18ca7571.js"><link rel="prefetch" href="/assets/js/4.3eb4e871.js"><link rel="prefetch" href="/assets/js/5.d47671f7.js"><link rel="prefetch" href="/assets/js/6.04568ca4.js"><link rel="prefetch" href="/assets/js/7.6b205a61.js"><link rel="prefetch" href="/assets/js/8.bcc6e7c3.js"><link rel="prefetch" href="/assets/js/9.47fd70d6.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.842ea349.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="https://cache.amap.com/ecology/tool/antmove/logo.png" alt="Antmove - 小程序转换器" class="logo"> <span class="site-name can-hide">Antmove - 小程序转换器</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="/config/" class="nav-link">
+  配置
+</a></div><div class="nav-item"><a href="/api/" class="nav-link">
+  API
+</a></div><div class="nav-item"><a href="/amove/" class="nav-link router-link-active">
+  编译器
+</a></div><div class="nav-item"><a href="/changelog/" class="nav-link">
+  更新日志
+</a></div><div class="nav-item"><a href="/blog/" class="nav-link">
+  博客
+</a></div><div class="nav-item"><a href="https://a.amap.com/antmove/static/data/treeTable.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  转换程度
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://github.com/ant-move/Antmove" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="/config/" class="nav-link">
+  配置
+</a></div><div class="nav-item"><a href="/api/" class="nav-link">
+  API
+</a></div><div class="nav-item"><a href="/amove/" class="nav-link router-link-active">
+  编译器
+</a></div><div class="nav-item"><a href="/changelog/" class="nav-link">
+  更新日志
+</a></div><div class="nav-item"><a href="/blog/" class="nav-link">
+  博客
+</a></div><div class="nav-item"><a href="https://a.amap.com/antmove/static/data/treeTable.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  转换程度
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://github.com/ant-move/Antmove" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Amove</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/amove/tech.html#简介" class="sidebar-link">简介</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/amove/tech.html#名词解释" class="sidebar-link">名词解释</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/amove/tech.html#编译原子" class="sidebar-link">编译原子</a></li><li class="sidebar-sub-header"><a href="/amove/tech.html#编译插件" class="sidebar-link">编译插件</a></li></ul></li><li><a href="/amove/tech.html#架构原理" class="sidebar-link">架构原理</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/amove/tech.html#设计思想" class="sidebar-link">设计思想</a></li><li class="sidebar-sub-header"><a href="/amove/tech.html#treeast" class="sidebar-link">treeAst</a></li><li class="sidebar-sub-header"><a href="/amove/tech.html#compile" class="sidebar-link">compile</a></li></ul></li><li><a href="/amove/tech.html#使用" class="sidebar-link">使用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/amove/tech.html#如何编写编译原子" class="sidebar-link">如何编写编译原子</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="amove"><a href="#amove" class="header-anchor">#</a> Amove</h1> <h2 id="简介"><a href="#简介" class="header-anchor">#</a> 简介</h2> <p>结构化代码编译框架，该框架将代码编译流程以一个个编译原子的形式组织起来，新的编译原子可以随意插入原有的编译执行流程，从而可以将编译逻辑和代码结构分离，极大的便于代码的复用抽象和扩展。</p> <h2 id="名词解释"><a href="#名词解释" class="header-anchor">#</a> 名词解释</h2> <h3 id="编译原子"><a href="#编译原子" class="header-anchor">#</a> 编译原子</h3> <p>编译原子就是一个处理一个编译功能的函数，原则上来说，流程中的某一个编译原子的移除不会打断整个编译流程产生，新增一个编译原子插入到原有的编译流程中也不会打断编译，但是能够影响最终的编译效果。</p> <h3 id="编译插件"><a href="#编译插件" class="header-anchor">#</a> 编译插件</h3> <p>编译插件是由编译原子组合而成的对象，对应特定场景的处理事务插件。</p> <h2 id="架构原理"><a href="#架构原理" class="header-anchor">#</a> 架构原理</h2> <h3 id="设计思想"><a href="#设计思想" class="header-anchor">#</a> 设计思想</h3> <p>框架会以文件结构深度优先遍历的方式依次触发对应文件的编译原子，框架触发的原子也可以触发其它原子的执行。</p> <h3 id="treeast"><a href="#treeast" class="header-anchor">#</a> treeAst</h3> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Application&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;body&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;children&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;File&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;body&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;filename&quot;</span><span class="token operator">:</span> <span class="token string">&quot;index.acss&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/pages/am-icon/index.acss&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;extname&quot;</span><span class="token operator">:</span> <span class="token string">&quot;.acss&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;dirname&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/pages/am-icon&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;basename&quot;</span><span class="token operator">:</span> <span class="token string">&quot;index&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;children&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;parent&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;deep&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;entry&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/pages/am-icon&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Acss&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;packageInfo&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;isOutput&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;File&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;body&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;filename&quot;</span><span class="token operator">:</span> <span class="token string">&quot;index.axml&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/pages/am-icon/index.axml&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;extname&quot;</span><span class="token operator">:</span> <span class="token string">&quot;.axml&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;dirname&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/pages/am-icon&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;basename&quot;</span><span class="token operator">:</span> <span class="token string">&quot;index&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;children&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;parent&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;deep&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;entry&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/pages/am-icon&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Axml&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;packageInfo&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;isOutput&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;File&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;body&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;filename&quot;</span><span class="token operator">:</span> <span class="token string">&quot;index.js&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/pages/am-icon/index.js&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;extname&quot;</span><span class="token operator">:</span> <span class="token string">&quot;.js&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;dirname&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/pages/am-icon&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;basename&quot;</span><span class="token operator">:</span> <span class="token string">&quot;index&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;children&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;parent&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;deep&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;entry&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/pages/am-icon&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Js&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;packageInfo&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;isOutput&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;File&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;body&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;filename&quot;</span><span class="token operator">:</span> <span class="token string">&quot;index.json&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/pages/am-icon/index.json&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;extname&quot;</span><span class="token operator">:</span> <span class="token string">&quot;.json&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;dirname&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/pages/am-icon&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;basename&quot;</span><span class="token operator">:</span> <span class="token string">&quot;index&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;children&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;parent&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;deep&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;entry&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/pages/am-icon&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Json&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;packageInfo&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;isOutput&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>如上述所示的文件结构，框架会依次执行 <code>Application</code>, <code>File</code> 编译原子。</p> <h3 id="compile"><a href="#compile" class="header-anchor">#</a> compile</h3> <p>如下有两个编译插件，</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function">compilerA</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'A'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">compilerB</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'B'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">compilerC</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'C'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">compilerD</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'D'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> b <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function">compilerA</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'bA'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    compilerB <span class="token punctuation">{</span>
+        hook<span class="token operator">:</span> <span class="token string">'before'</span><span class="token punctuation">,</span>
+        <span class="token function">body</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'bB'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    compilerC <span class="token punctuation">{</span>
+        hook<span class="token operator">:</span> <span class="token string">'replace'</span><span class="token punctuation">,</span>
+        <span class="token function">body</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'bC'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    compilerD <span class="token punctuation">{</span>
+        hook<span class="token operator">:</span> <span class="token string">'mounted'</span><span class="token punctuation">,</span>
+        <span class="token function">body</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'bD'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>执行</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">new</span> <span class="token class-name">Compiler</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    entry<span class="token punctuation">,</span>
+    output<span class="token punctuation">,</span>
+    plugins<span class="token operator">:</span> <span class="token punctuation">[</span>a<span class="token punctuation">,</span> b<span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>上述的 a、b 两个编译插件具有一样的编译原子，所以 b 的编译原子会插入到 a 的运行流程中，hook 有四种，分别为 <code>before</code>, <code>replace</code>, <code>after</code>, <code>mounted</code>。默认为 <code>after</code>，所以 b 的 <code>compilerA</code> 会紧接着 a 的 <code>compilerA</code> 执行。</p> <p>这里假设 a 的编译原子的执行顺序如下：</p> <ul><li>A</li> <li>B</li> <li>C</li> <li>D</li></ul> <p>那么加上 b 编译插件会，最终的执行流程为</p> <ul><li>A</li> <li>bA</li> <li>bB</li> <li>B</li> <li>bC</li> <li>D</li> <li>bd</li></ul> <h2 id="使用"><a href="#使用" class="header-anchor">#</a> 使用</h2> <h3 id="如何编写编译原子"><a href="#如何编写编译原子" class="header-anchor">#</a> 如何编写编译原子</h3> <ul><li>具有同样的上下文</li> <li>参数
+<ul><li>第一个参数为当前遍历节点（主动触发则受触发调用影响）</li> <li>第二个参数为整个流程配置文件</li></ul></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.b24cb1c1.js" defer></script><script src="/assets/js/2.360668ca.js" defer></script><script src="/assets/js/12.2e276302.js" defer></script>
+  </body>
+</html>
